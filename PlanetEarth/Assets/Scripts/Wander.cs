@@ -50,7 +50,12 @@ public class Wander : SteeringBehaviour
 
     public override Vector3 Calculate()
     {
-        Vector3 disp = jitter * new Vector3(Random.Range(0, radius), 0, Random.Range(0, (radius))) * Time.deltaTime;
+        //Same idea as getting a random point on the unit circle, but the y value is always zero becuase we don't need the model to travel up and down that axis
+        Vector3 disp = jitter * new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)) * Time.deltaTime;
+
+        //Vector3 v33 = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
+        //Debug.Log(v33);
+
         target -= disp;
         target.Normalize();
         target *= radius;
@@ -65,7 +70,8 @@ public class Wander : SteeringBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target = new Vector3(Random.Range(0, radius), 0, Random.Range(0, radius)) * radius;
+        //Same idea as getting a random point on the unit circle, but the y value is always zero becuase we don't need the model to travel up and down that axis
+        target = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)) * radius;
     }
 
     // Update is called once per frame
