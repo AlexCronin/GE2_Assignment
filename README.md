@@ -7,7 +7,7 @@ Student Number: C12499592
 
 # Description of the assignment
 
-The birds flying in the scene are using the FollowPath behaviour, but for some reason I couldn't get them to follow the path
+The birds flying in the scene are using the FollowPath behaviour, but for some reason I couldn't get them to follow the path. The birds flying in the scene are using the FollowPath behaviour, but for some reason I couldn't get them to follow the path
 This is a bulleted list
 
 - Item
